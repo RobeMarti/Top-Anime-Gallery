@@ -6,12 +6,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         <!--CSS Link-->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/gallery.css') }}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }}</title>
     </head>
     <body style="background-color:#242020; text-align: center;">
-        <p class="alfa-slab-one-regular">Berserk</p>
+        <div class="container">
+                <p class="item">Berserk</p>
+                <p class="item">Gachiakuta</p>
+                <p class="item">GTO</p>
+                <p class="item">Demon Slayer</p>
+                <p class="item">Solo Leveling</p>
+                <p class="item">Bungou Stray Dogs</p>
+        </div>    
     </body>
 </html>
