@@ -13,12 +13,55 @@
     </head>
     <body style="background-color:#242020; text-align: center;">
         <div class="container">
-                <p class="item">Berserk</p>
-                <p class="item">Gachiakuta</p>
-                <p class="item">GTO</p>
-                <p class="item">Demon Slayer</p>
-                <p class="item">Solo Leveling</p>
-                <p class="item">Bungou Stray Dogs</p>
-        </div>    
+                <div class="item" data-anime="berserk">
+                    <span class="anime-title">Berserk</span>
+                    <div class="gif-container">
+                        <img src="{{ url_for('static', filename='public/Berserk/griffith-stare.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Berserk/rage-guts.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Berserk/skeleton.gif') }}">
+                    </div>
+                </div>
+                <div class="item" data-anime="gachiakuta">
+                    <span class="anime-title">Gachiakuta</span>
+                    <div class="gif-container">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/dear-menacing.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/enjin-confused.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/semiu-stare.gif') }}">
+                    </div>
+                </div>
+                <div class="item" data-anime="gto">
+                    <span class="anime-title">GTO</span>
+                    <div class="gif-container">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/dear-menacing.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/enjin-confused.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/semiu-stare.gif') }}">
+                    </div>
+                </div>
+                <div class="item" data-anime="demon_slayer">
+                    <span class="anime-title">Demon Slayer</span>
+                    <div class="gif-container">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/dear-menacing.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/enjin-confused.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/semiu-stare.gif') }}">
+                    </div>
+                </div>
+                <div class="item" data-anime="solo_leveling">
+                    <span class="anime-title">Solo Leveling</span>
+                    <div class="gif-container">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/dear-menacing.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/enjin-confused.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/semiu-stare.gif') }}">
+                    </div>
+                </div>
+                <div class="item" data-anime="bungou_stray_dogs">
+                    <span class="anime-title">Bungou Stray Dogs</span>
+                    <div class="gif-container">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/dear-menacing.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/enjin-confused.gif') }}">
+                        <img src="{{ url_for('static', filename='public/Gachiakuta/semiu-stare.gif') }}">
+                    </div>
+                </div>
+        </div>  
+        <script src="{{ url_for('static', filename='JavaScript/main.js') }}"></script>
     </body>
 </html>

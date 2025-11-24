@@ -12,8 +12,11 @@
     font-style: normal;
     font-size: 2.5rem;
     color: #564D4D;
-    margin: 10px 0;
+    margin: 5px 0;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 .item:hover{
@@ -21,4 +24,22 @@
     cursor: default;
     scale: 110%;
     transition: all 0.3s ease-in-out;
+}
+
+.gif-container{
+    position: relative;
+}
+
+.gif-container img{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.anime-title {
+    position: relative;
 }
