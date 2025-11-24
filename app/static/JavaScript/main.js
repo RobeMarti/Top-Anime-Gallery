@@ -7,28 +7,28 @@ const positions = {
     gachiakuta: [
         { left: -120, top: -40 },
         { left: 180, top: -125 },
-        { left: 70, top: 20 }
+        { left: 100, top: 20 }
     ],
     gto:
     [
-        { left: -180, top: 0 },
+        { left: -180, top: -20 },
         { left: 150, top: -50 },
-        { left: 0, top: 150 }
+        { left: 0, top: -150 }
     ],
     demon_slayer: [
-        { left: -150, top: 0 },
+        { left: -110, top: -40 },
         { left: 150, top: 0 },
-        { left: 0, top: 150 }
+        { left: 200, top: -120 }
     ],
     solo_leveling: [
-        { left: -130, top: -30 },
-        { left: 160, top: -70 },
-        { left: 0, top: 130 }
+        { left: -110, top: -20 },
+        { left: 160, top: -100 },
+        { left: 30, top: 20 }
     ],
     bungou_stray_dogs: [
-        { left: -160, top: -20 },
-        { left: 140, top: -80 },
-        { left: 0, top: 140 }
+        { left: 190, top: 10 },
+        { left: 40, top: -100 },
+        { left: 370, top: -100 }
     ]
 };
 

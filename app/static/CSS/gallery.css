@@ -17,6 +17,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
+    z-index: 1;
 }
 
 .item:hover{
@@ -24,6 +25,7 @@
     cursor: default;
     scale: 110%;
     transition: all 0.3s ease-in-out;
+    z-index: 10;
 }
 
 .gif-container{
