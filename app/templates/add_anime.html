@@ -1,0 +1,28 @@
+<!DOCTYPE htnml>
+<html lang="en">
+    <head>
+        <!--Font Link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        <!--CSS Link-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/add_anime.css') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+    </head>
+    <body style="background-color:#242020; text-align: center;">
+        <div class="form-container">
+            <h1>Add New Anime</h1>
+            <form method="POST" enctype="multipart/form-data" action="{{ url_for('add_anime') }}">
+                <label for="anime_name">Anime Name:</label>
+                <input type="text" id="anime_name" name="anime_name" required>
+
+                <label for="gif_files">GIF Files (comma separated):</label>
+                <input type="file"id="gif_files" name="gif_files" multiple required></input>
+
+                <button type="submit">Add Anime</button>
+            </form>
+        </div>
+    </body>
+</html>
