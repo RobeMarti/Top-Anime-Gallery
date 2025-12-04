@@ -5,64 +5,35 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-        <!--CSS Link-->
+
+        <!--CSS-->
         <link rel="stylesheet" href="{{ url_for('static', filename='CSS/gallery.css') }}">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <a href="{{ url_for('add_anime') }}">Add New Anime</a>
+
         <title>{{ title }}</title>
     </head>
+
     <body style="background-color:#242020; text-align: center;">
+        <div class="header" style="text-align: right;">
+            <a href="{{ url_for('add_anime') }}" class="add-button">+ Add Anime</a>
+        </div>
+
         <div class="container">
-                <div class="item" data-anime="berserk">
-                    <span class="anime-title">Berserk</span>
-                    <div class="gif-container">
-                        <img src="{{ url_for('static', filename='public/Berserk/griffith-stare.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Berserk/rage-guts.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Berserk/skeleton.gif') }}">
-                    </div>
+            {% for anime in anime_list %}
+            <div class="item" data-anime="{{ anime.title|replace(' ', '_') }}">
+                <span class="anime-title">{{ anime.title }}</span>
+
+                <div class="gif-container">
+                    {% for gif in anime.gifs %}
+                        <img src="{{ url_for('static', filename=gif.path) }}">
+                    {% endfor %}
                 </div>
-                <div class="item" data-anime="gachiakuta">
-                    <span class="anime-title">Gachiakuta</span>
-                    <div class="gif-container">
-                        <img src="{{ url_for('static', filename='public/Gachiakuta/dear-menacing.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Gachiakuta/enjin-confused.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Gachiakuta/semiu-stare.gif') }}">
-                    </div>
-                </div>
-                <div class="item" data-anime="gto">
-                    <span class="anime-title">GTO</span>
-                    <div class="gif-container">
-                        <img src="{{ url_for('static', filename='public/Great Teacher Onizuka/gto-intro.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Great Teacher Onizuka/gto-kenshiro.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Great Teacher Onizuka/onizuka-money.gif') }}">
-                    </div>
-                </div>
-                <div class="item" data-anime="demon_slayer">
-                    <span class="anime-title">Demon Slayer</span>
-                    <div class="gif-container">
-                        <img src="{{ url_for('static', filename='public/Demon Slayer/akaza.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Demon Slayer/happy-muichiro.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Demon Slayer/kyojuro.gif') }}">
-                    </div>
-                </div>
-                <div class="item" data-anime="solo_leveling">
-                    <span class="anime-title">Solo Leveling</span>
-                    <div class="gif-container">
-                        <img src="{{ url_for('static', filename='public/Solo Leveling/choi-jong-in.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Solo Leveling/statue-smile.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Solo Leveling/sung-jin-woo.gif') }}">
-                    </div>
-                </div>
-                <div class="item" data-anime="bungou_stray_dogs">
-                    <span class="anime-title">Bungou Stray Dogs</span>
-                    <div class="gif-container">
-                        <img src="{{ url_for('static', filename='public/Bungou Stray Dogs/nikolai.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Bungou Stray Dogs/osamu-dazai.gif') }}">
-                        <img src="{{ url_for('static', filename='public/Bungou Stray Dogs/chuuya-nakahara.gif') }}">
-                    </div>
-                </div>
-        </div>  
+            </div>
+            {% endfor %}
+        </div>
+
         <script src="{{ url_for('static', filename='JavaScript/main.js') }}"></script>
     </body>
 </html>

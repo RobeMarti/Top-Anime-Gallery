@@ -1,25 +1,55 @@
-from app import app
-from flask import render_template, request
+from app import app, db
+from flask import render_template, request, redirect, url_for
+from app.models import Anime, Gif
+from sqlalchemy import func
+import os
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Top-Anime-Gallery')
+    animes = Anime.query.all()
+    return render_template('index.html', title='Top-Anime-Gallery', anime_list=animes)
 
 @app.route('/add_anime', methods=['GET', 'POST'])
 def add_anime():
     if request.method == 'POST':
+        
         anime_title = request.form['anime_name']
-        gif_files = request.files.getlist('gif_files')
+        
+        existing = Anime.query.filter(
+            func.lower(Anime.title) == anime_title.lower()
+        ).first()
 
-        con = db.engine.connect()
-        exist = con.execute(
-            "SELECT * FROM anime WHERE title = :title",
-            {"title": anime_title}
-        )
-
-        if exist == []:
-            pass
+        if not existing:
+            anime = Anime(title=anime_title)
+            db.session.add(anime)
+            db.session.commit()
         else:
-            pass
+            anime = existing
+
+        gif_files = request.files.getlist('gif_files')
+        
+        folder_name = anime_title.replace(" ", "_")
+        base_path = os.path.join(app.root_path, 'static', 'public', folder_name)
+        os.makedirs(base_path, exist_ok=True)
+
+        for gif in gif_files:
+            if gif.filename == "":
+                continue  # file vuoto → skip
+            
+            # percorso sul server
+            file_path = os.path.join(base_path, gif.filename)
+            gif.save(file_path)
+
+            # percorso da salvare nel DB (quello che userà HTML)
+            db_path = f"public/{folder_name}/{gif.filename}"
+
+            # creo l’entry nel database
+            new_gif = Gif(path=db_path, anime_id=anime.id)
+            db.session.add(new_gif)
+
+        db.session.commit()
+
+        return redirect(url_for('index'))
+
     return render_template('add_anime.html', title='Add New Anime')

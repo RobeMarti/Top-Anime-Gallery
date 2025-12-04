@@ -1,31 +1,31 @@
 const positions = {
-    berserk: [
+    Berserk: [
         { left: -140, top: -50 },
         { left: 180, top: -50 },
         { left: 0, top: -130 }
     ],
-    gachiakuta: [
+    Gachiakuta: [
         { left: -120, top: -40 },
         { left: 180, top: -125 },
         { left: 100, top: 20 }
     ],
-    gto:
+    GTO:
     [
         { left: -180, top: -20 },
         { left: 150, top: -50 },
         { left: 0, top: -150 }
     ],
-    demon_slayer: [
+    Demon_Slayer: [
         { left: -110, top: -40 },
         { left: 150, top: 0 },
         { left: 200, top: -120 }
     ],
-    solo_leveling: [
+    Solo_Leveling: [
         { left: -110, top: -20 },
         { left: 160, top: -100 },
         { left: 30, top: 20 }
     ],
-    bungou_stray_dogs: [
+    Bungou_Stray_Dogs: [
         { left: 190, top: 10 },
         { left: 40, top: -100 },
         { left: 370, top: -100 }

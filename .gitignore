@@ -57,3 +57,6 @@ Thumbs.db
 
 # Node modules (if any front-end tooling gets added)
 node_modules/
+
+#personal anime
+/app/static/public/*

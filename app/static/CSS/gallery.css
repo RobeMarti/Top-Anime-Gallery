@@ -45,3 +45,10 @@
 .anime-title {
     position: relative;
 }
+
+.header{
+    font-family: "Alfa Slab One", serif;
+    font-size: 1.2rem;
+    color: #FFFFFF;  
+    position: relative;
+}
