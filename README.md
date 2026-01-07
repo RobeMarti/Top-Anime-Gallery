@@ -10,7 +10,7 @@ Each title reveals three scenes with simple animations.
 - CSS
 - JavaScript
 
-🚀 Installation and Setup Guide
+# 🚀 Installation and Setup Guide
 Prerequisites
 
 Python 3.11 or higher
