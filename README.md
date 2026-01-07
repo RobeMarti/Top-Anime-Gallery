@@ -19,26 +19,35 @@ Git (optional, for cloning the repository)
 
 Step 1: Download the Project
 Option A: Using Git
-bashgit clone https://github.com/RobeMarti/Top-Anime-Gallery
+```
+git clone https://github.com/RobeMarti/Top-Anime-Gallery
 cd top-anime-gallery
-Option B: Download ZIP
+```
 
-Download the ZIP file from GitHub
-Extract it to your desired location
-Open a terminal in the extracted folder
+Option B: Download ZIP
+- Download the ZIP file from GitHub
+- Extract it to your desired location
+- Open a terminal in the extracted folder
 
 Step 2: Create a Virtual Environment
 Creating a virtual environment is highly recommended to isolate project dependencies.
+
 On Windows:
-bashpython -m venv venv
+```
+python -m venv venv
 venv\Scripts\activate.ps1 
+```
+
 On macOS/Linux:
-bashpython3 -m venv venv
+```
+python3 -m venv venv
 source venv/bin/activate
+```
 You should see (venv) at the beginning of your terminal prompt, indicating the virtual environment is active.
+
 Step 3: Install Required Dependencies
 With the virtual environment activated, install all necessary packages:
-bashpip install flask flask-sqlalchemy
+``pip install flask flask-sqlalchemy``
 
 Dependencies included:
 - flask - Web framework
@@ -47,6 +56,7 @@ Dependencies included:
 
 Step 4: Verify Project Structure
 Make sure your project structure looks like this:
+```
 Top-Anime-Gallery/
 ├── app/
 │   ├── __init__.py
@@ -66,16 +76,19 @@ Top-Anime-Gallery/
 ├── main.py
 ├── create_db.py
 └── README.md
+```
 Step 5: Initialize the Database
 Before running the application, you need to create the database and tables:
 
 <b><u>(The commands may be different in your case. In mine, I used python3 and py based on the computer I was working on.)</u></b>
 
-bashpython create_db.py
+``python create_db.py`` 
 Expected output:
+```
 Database e tabelle creati correttamente!
 Percorso database: sqlite:///anime.db
 Tabelle create: ['anime', 'gif']
+```
 
 This script will:
 - Create the instance/ folder
