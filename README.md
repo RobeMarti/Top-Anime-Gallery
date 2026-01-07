@@ -12,10 +12,9 @@ Each title reveals three scenes with simple animations.
 
 # 🚀 Installation and Setup Guide
 Prerequisites
-
-Python 3.11 or higher
-pip (Python package manager)
-Git (optional, for cloning the repository)
+- Python 3.11 or higher
+- pip (Python package manager)
+- Git (optional, for cloning the repository)
 
 Step 1: Download the Project
 Option A: Using Git
