@@ -11,6 +11,9 @@ Each title reveals three scenes with simple animations.
 - JavaScript
 
 # 🚀 Installation and Setup Guide
+
+<b><u>(The commands may be different in your case. In mine, I used python3 and py based on the computer I was working on.)</u></b>
+
 Prerequisites
 - Python 3.11 or higher
 - pip (Python package manager)
@@ -78,8 +81,6 @@ Top-Anime-Gallery/
 ```
 Step 5: Initialize the Database
 Before running the application, you need to create the database and tables:
-
-<b><u>(The commands may be different in your case. In mine, I used python3 and py based on the computer I was working on.)</u></b>
 
 ``python create_db.py`` 
 Expected output:
